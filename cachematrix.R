@@ -72,7 +72,7 @@ makeCacheMatrix2 <- function(x = matrix()) {
                 if(is.null(invmat)){
                         # so invmat is null then the inverse hasn't been calculated yet, let's do it.
                         if(det(x)){
-                                message("calculating")
+                                message("calculating") #message doesn't get printed. 
                                 inv <- solve(x)
                                 invmat <<- inv # and as we have calculated it let's cache it...
                                 inv #just to return the value
@@ -83,7 +83,7 @@ makeCacheMatrix2 <- function(x = matrix()) {
                 }
                 else {
                         #the inv has already been calculated. let's return it...
-                        message("getting cache data")
+                        message("getting cache data") #message doesn't get printed...
                         invmat
                 }
         }
